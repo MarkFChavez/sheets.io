@@ -6,22 +6,4 @@
         %div
           Manage and organize your things without the hassle
 
-      %form.bg-white
-        .mb-4
-          %label.block.text-sm.font-bold.mb-2{ for: "email" }
-            EMAIL
-
-          = text_field_tag "email", nil, class: "appearance-none border border-grey-darker w-full py-3 px-3", placeholder: "mark@sheets.io"
-
-        .mb-4
-          %label.block.text-sm.font-bold.mb-2{ for: "password" }
-            PASSWORD
-
-          = password_field_tag "password", nil, class: "appearance-none border border-grey-darker w-full py-3 px-3", placeholder: "foobar123"
-
-        .mb-4
-          %button{ class: "font-bold text-lg bg-black text-white py-3 px-4" }
-            SIGN IN
-
-        .text-right
-          = link_to "Join us here.", "#", class: "text-blue no-underline"
+      = render "form"
