@@ -9,10 +9,9 @@
       PASSWORD
     = password_field_tag "password", nil, class: "appearance-none border border-grey-darker w-full py-3 px-3", placeholder: "foobar123"
 
-  .mb-4
+  .flex.justify-between
     %button{ class: "font-bold text-lg bg-black text-white py-3 px-4" }
       SIGN IN
 
-  .text-right
-    = link_to "Join us here.", "#", class: "text-lg text-black underline"
+    = link_to "Join us here.", "#", class: "text-lg text-black underline py-3"
 
