@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   get "/signup" => "registrations#new"
   post "/signup" => "registrations#create"
 
-  resource :dashboard, only: [:show]
+  resource :dashboard, only: [:show], constraints: AuthenticatedConstraint.new
 
 end
