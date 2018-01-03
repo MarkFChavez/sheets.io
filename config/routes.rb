@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  get "/signin" => "sessions#new", as: :signin
-  get "/signup" => "registrations#new", as: :signup
+  get "/signin", to: "sessions#new"
+  post "/signin", to: "sessions#create"
+
+  get "/signup" => "registrations#new"
+  post "/signup" => "registrations#create"
 
 end

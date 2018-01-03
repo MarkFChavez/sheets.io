@@ -1,27 +1,20 @@
-= form_tag "#", class: "bg-white" do
-  .mb-4
-    %label.block.font-bold.mb-2{ for: "email" }
-      NAME
-    = text_field_tag "name", nil, class: "appearance-none border border-grey-darker w-full py-3 px-3", placeholder: "Mark Chavez"
+.mb-4
+  %label.block.font-bold.mb-2{ for: "name" }
+    NAME
+  = f.text_field :name, class: "appearance-none border border-grey-darker w-full py-3 px-3", placeholder: "Mark Chavez"
 
-  .mb-4
-    %label.block.font-bold.mb-2{ for: "email" }
-      EMAIL
-    = text_field_tag "email", nil, class: "appearance-none border border-grey-darker w-full py-3 px-3", placeholder: "mark@sheets.io"
+.mb-4
+  %label.block.font-bold.mb-2{ for: "email" }
+    EMAIL
+  = f.email_field :email, class: "appearance-none border border-grey-darker w-full py-3 px-3", placeholder: "mark@sheets.io"
 
-  .mb-4
-    %label.block.font-bold.mb-2{ for: "password" }
-      PASSWORD
-    = password_field_tag "password", nil, class: "appearance-none border border-grey-darker w-full py-3 px-3", placeholder: "foobar123"
+.mb-4
+  %label.block.font-bold.mb-2{ for: "password" }
+    PASSWORD
+  = f.password_field :password, class: "appearance-none border border-grey-darker w-full py-3 px-3", placeholder: "foobar123"
 
-  .mb-4
-    %label.block.font-bold.mb-2{ for: "password" }
-      CONFIRM PASSWORD
-    = password_field_tag "password_confirmation", nil, class: "appearance-none border border-grey-darker w-full py-3 px-3", placeholder: "foobar123"
-
-  .flex.justify-between
-    %button{ class: "font-bold text-lg bg-black text-white py-3 px-4" }
-      SIGN UP
-
-    = link_to "I already have an account.", signin_path, class: "text-lg text-black underline py-3"
+.mb-4
+  %label.block.font-bold.mb-2{ for: "password" }
+    CONFIRM PASSWORD
+  = f.password_field :password_confirmation, class: "appearance-none border border-grey-darker w-full py-3 px-3", placeholder: "foobar123"
 
