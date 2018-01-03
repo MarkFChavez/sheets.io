@@ -8,7 +8,9 @@ class RegistrationsController < ApplicationController
     @user = User.new(user_params)
     
     if @user.save
-      render json: "registration successful"
+      # store in session as well...
+      session["user_id"] = @user.id
+      redirect_to dashboard_url
     else 
       render :new
     end
