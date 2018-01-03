@@ -6,4 +6,8 @@
         %p.text-lg Manage and organize your things with clarity in mind.
 
     .border-t-8.border-b-8.border-black.px-4.py-4
+      - if alert
+        .bg-black.py-4.px-2.mb-3.text-center
+          %p.text-white.font-bold.text-lg= alert.upcase
+
       = render "form"

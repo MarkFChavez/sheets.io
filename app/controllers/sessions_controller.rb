@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       render text: "success"
     else 
-      render :new
+      redirect_to signin_url, alert: "Invalid email or password."
     end
   end
 
