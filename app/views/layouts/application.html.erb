@@ -11,6 +11,7 @@
 
   <body>
     <div>
+      <%= render 'layouts/header' if signed_in? %>
       <%= yield %>
     </div>
   </body>
