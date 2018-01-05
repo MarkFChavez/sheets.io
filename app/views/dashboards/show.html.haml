@@ -3,19 +3,10 @@
 
 .container.mx-auto.max-w-lg.mt-8
   #notes.mb-8
-    %p.text-3xl.font-bold notes
-
-    %div.mt-2.border-t-4.border-b-4.border-black.px-2.py-4
-      notes here
+    = render 'dashboards/notes'
 
   #docs-and-files.mb-8
-    %p.text-3xl.font-bold docs & files
-
-    %div.mt-2.border-t-4.border-b-4.border-black.px-2.py-4
-      files here
+    = render 'dashboards/docs_and_files'
 
   #projects.mb-8
-    %p.text-3xl.font-bold projects
-
-    %div.mt-2.border-t-4.border-b-4.border-black.px-2.py-4
-      projects here
+    = render 'dashboards/projects'
