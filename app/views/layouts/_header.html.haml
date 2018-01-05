@@ -4,5 +4,5 @@
       %p.text-5xl.font-bold= t('title')
 
     .flex.pt-6
-      %p.text-xl.mr-3 Mark Chavez
+      %p.text-xl.mr-3= current_user.name
       = link_to t('session.logout'), signout_path, method: :delete, class: "text-xl text-black no-underline border-b-4 border-black"
