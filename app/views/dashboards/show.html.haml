@@ -1,9 +1,9 @@
 %header
   = render 'layouts/header'
 
-.container.mx-auto.max-w-lg.mt-8
+.container.mx-auto.max-w-lg.mt-8.px-4
   #notes.mb-8
-    = render 'dashboards/notes'
+    = render 'dashboards/notes', categories: dashboard.get_note_categories
 
   #docs-and-files.mb-8
     = render 'dashboards/docs_and_files'
