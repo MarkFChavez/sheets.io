@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get "/signup" => "registrations#new"
   post "/signup" => "registrations#create"
 
+
   resource :dashboard, only: [:show], constraints: AuthenticatedConstraint.new
+  resources :note_categories, only: [:new, :create], constraints: AuthenticatedConstraint.new
 
 end
