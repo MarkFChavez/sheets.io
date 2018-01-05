@@ -1,8 +1,8 @@
 .border-b-2.border-black.px-4.py-4
   .flex.justify-between
     %div
-      %p.text-5xl.font-bold sheets
+      %p.text-5xl.font-bold= t('title')
 
     .flex.pt-6
       %p.text-xl.mr-3 Mark Chavez
-      = link_to "Logout", signout_path, method: :delete, class: "text-xl text-black no-underline border-b-2 border-black"
+      = link_to t('session.logout'), signout_path, method: :delete, class: "text-xl text-black no-underline border-b-2 border-black"

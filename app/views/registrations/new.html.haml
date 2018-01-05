@@ -1,20 +1,20 @@
 .flex.justify-center.mt-8
   .w-full.max-w-sm
     .mb-4.text-center
-      %p.text-4xl.font-bold Sheets
+      %p.text-4xl.font-bold= t('title')
       %div
-        %p.text-lg Manage and organize your things with clarity in mind.
+        %p.text-lg= t('slogan')
 
     .border-t-8.border-b-8.border-black.px-4.py-4
       .mb-4
-        %p.underline.text-center.font-bold.text-lg CREATE AN ACCOUNT
+        %p.underline.text-center.font-bold.text-lg= t('registration.link.title').upcase
 
       = form_for @user, url: signup_path, method: :post, class: "bg-white" do |f|
 
         - if @user.errors.any?
           .my-2.bg-black.px-2.py-2
             .mb-2
-              %p.text-xl.text-white.font-bold #{pluralize(@user.errors.size, "error")} found. 
+              %p.text-xl.text-white.font-bold #{pluralize(@user.errors.size, "error")} found.
 
             %div
               %ul.list-reset
@@ -26,7 +26,7 @@
 
         .flex.justify-between
           %button{ class: "font-bold text-lg bg-black text-white py-3 px-4" }
-            SIGN UP
+            = t('registration.button.create')
 
-          = link_to "I already have an account", signin_path, class: "text-lg text-black underline py-3"
+          = link_to t('session.link.title'), signin_path, class: "text-lg text-black underline py-3"
 
