@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 20180105104926) do
   end
 
   create_table "notes", force: :cascade do |t|
-    t.string "title"
     t.text "body"
     t.integer "note_category_id"
     t.datetime "created_at", null: false

@@ -1,7 +1,6 @@
 class CreateNote < ActiveRecord::Migration[5.1]
   def change
     create_table :notes do |t|
-      t.column :title, :string
       t.column :body, :text
       t.column :note_category_id, :integer
 
