@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  
+
   # def new
   # end
 
@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       # store in session
       session["user_id"] = user.id
       redirect_to dashboard_url
-    else 
+    else
       redirect_to signin_url, alert: "Invalid email or password."
     end
   end

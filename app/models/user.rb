@@ -1,6 +1,5 @@
 class User < ApplicationRecord
   has_secure_password
-
-  validates_presence_of :name
-  validates_presence_of :email
+  validates :name, :email, presence: true
+  has_many :note_categories, dependent: :destroy
 end
