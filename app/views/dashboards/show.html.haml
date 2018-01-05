@@ -1,1 +1,21 @@
-= render 'layouts/header'
+%header
+  = render 'layouts/header'
+
+.container.mx-auto.max-w-lg.mt-8
+  #notes.mb-8
+    %p.text-3xl.font-bold notes
+
+    %div.mt-2.border-t-4.border-b-4.border-black.px-2.py-4
+      notes here
+
+  #docs-and-files.mb-8
+    %p.text-3xl.font-bold docs & files
+
+    %div.mt-2.border-t-4.border-b-4.border-black.px-2.py-4
+      files here
+
+  #projects.mb-8
+    %p.text-3xl.font-bold projects
+
+    %div.mt-2.border-t-4.border-b-4.border-black.px-2.py-4
+      projects here
