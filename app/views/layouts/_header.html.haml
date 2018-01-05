@@ -1,8 +1,7 @@
-.border-b-4.border-black.px-4.py-4
-  .flex.justify-between
-    %div
-      %p.text-5xl.font-bold= t('title')
+.px-4.py-4.bg-black.text-white
+  %div{ class: "lg:flex lg:justify-between sm:block" }
+    %p.text-5xl.font-bold{ class: "text-center md:text-left lg:text-left" }= t('title')
 
-    .flex.pt-6
+    .flex.pt-6{ class: "justify-center md:text-left" }
       %p.text-xl.mr-3= current_user.name
-      = link_to t('session.logout'), signout_path, method: :delete, class: "text-xl text-black no-underline border-b-4 border-black"
+      = link_to t('session.logout'), signout_path, method: :delete, class: "text-xl text-white no-underline border-b-4 border-white"
