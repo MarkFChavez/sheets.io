@@ -3,10 +3,12 @@
 
   .mt-2.border-t-4.border-b-4.border-black.py-8
     = form_for category do |f|
-      .form-item
+      .form-item.mb-4
         = f.label :name, "NAME", class: "font-bold text-xl"
         .mt-2
           = f.text_field :name, class: "text-xl border-2 border-black px-2 py-4 w-full md:w-1/2 lg:w-1/2", placeholder: "e.g. work, health, money"
 
-      .mt-4
-        = f.submit "ADD", class: "bg-black text-white px-2 py-4 text-xl w-32"
+      .mb-4
+        = f.submit "ADD", class: "cursor-pointer font-bold bg-black text-white px-2 py-4 text-xl w-32"
+
+      = link_to "Return me to dashboard", dashboard_path, class: "text-black no-underline text-lg border-b-2 border-black"
