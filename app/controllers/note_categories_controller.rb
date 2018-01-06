@@ -1,5 +1,10 @@
 class NoteCategoriesController < ApplicationController
 
+  def show
+    note_category = NoteCategory.find(params[:id])
+    render 'show', locals: { category: note_category }
+  end
+
   def new
     note_category = NoteCategory.new
     render 'new', locals: { category: note_category }

@@ -9,6 +9,6 @@ Rails.application.routes.draw do
 
 
   resource :dashboard, only: [:show], constraints: AuthenticatedConstraint.new
-  resources :note_categories, only: [:new, :create], constraints: AuthenticatedConstraint.new
+  resources :note_categories, only: [:show, :new, :create], constraints: AuthenticatedConstraint.new
 
 end

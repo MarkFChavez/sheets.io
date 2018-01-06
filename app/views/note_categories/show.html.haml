@@ -1,0 +1,22 @@
+.container.mx-auto.max-w-md.mt-8.px-4
+  .mb-8
+    %p.text-center.text-2xl.font-bold
+      = link_to 'notes', dashboard_path, class: "text-black border-b-2 border-black no-underline"
+      >
+      Personal
+
+  .mb-4.text-right
+    = link_to "ADD NOTE", new_note_category_path, class: "font-bold text-black text-sm px-4 py-2 no-underline border-2 border-black hover:bg-black hover:text-white"
+
+  .border-t-4.border-b-4.border-black.py-4
+    wee
+    -# = form_for category do |f|
+    -#   .form-item.mb-4
+    -#     = f.label :name, "NAME", class: "font-bold text-xl"
+    -#     .mt-2
+    -#       = f.text_field :name, class: "text-xl border-2 border-black px-2 py-4 w-full md:w-1/2 lg:w-1/2", placeholder: "e.g. work, health, money"
+
+    -#   .mb-4
+    -#     = f.submit "ADD", class: "cursor-pointer font-bold bg-black text-white px-2 py-4 text-xl w-32"
+
+    -#   = link_to "Return me to dashboard", dashboard_path, class: "text-black no-underline text-lg border-b-2 border-black"

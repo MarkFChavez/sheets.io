@@ -4,6 +4,5 @@
       = link_to t('title'), dashboard_path, class: "text-white no-underline"
 
     .flex.pt-6{ class: "justify-center md:text-left" }
-      %p.text-xl.mr-3.border-b-2.border-blue Home
       %p.text-xl.mr-3.border-b-2.border-green= current_user.name
       = link_to t('session.logout'), signout_path, method: :delete, class: "text-xl text-white no-underline border-b-2 border-red"

@@ -1,7 +1,10 @@
 .container.mx-auto.max-w-md.mt-8.px-4
-  %p.text-3xl.font-bold CREATE A CATEGORY
+  .mb-8
+    %p.text-center.text-2xl.font-bold
+      = link_to 'notes', dashboard_path, class: "text-black border-b-2 border-black no-underline"
+      > add category
 
-  .mt-2.border-t-4.border-b-4.border-black.py-8
+  .border-t-4.border-b-4.border-black.py-8
     = form_for category do |f|
       .form-item.mb-4
         = f.label :name, "NAME", class: "font-bold text-xl"
