@@ -3,13 +3,23 @@
     %p.text-center.text-2xl.font-bold
       = link_to 'notes', dashboard_path, class: "text-black border-b-2 border-black no-underline"
       >
-      Personal
+      = category.name
 
   .mb-4.text-right
     = link_to "ADD NOTE", new_note_category_path, class: "font-bold text-black text-sm px-4 py-2 no-underline border-2 border-black hover:bg-black hover:text-white"
 
-  .border-t-4.border-b-4.border-black.py-4
-    wee
+  .border-t-4.border-b-4.border-black
+    - notes.each do |note|
+      .flex.flex-col.justify-between.my-8.border-l-8.border-black.px-2{ style: "min-height: 80px" }
+        .text-2xl
+          = note.body
+
+        .inline-flex.actions{ class: "my-2" }
+          .mr-2
+            %small= link_to "remove", "#", class: "bg-red text-white font-bold no-underline p-2"
+          .mr-2
+            %small= link_to "edit", "#", class: "bg-black text-white font-bold no-underline w-28 p-2"
+
     -# = form_for category do |f|
     -#   .form-item.mb-4
     -#     = f.label :name, "NAME", class: "font-bold text-xl"

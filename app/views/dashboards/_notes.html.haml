@@ -8,5 +8,5 @@
       - categories.each do |category|
         %div{ class: "shadow bg-black text-white w-1/3 mb-4 border-4 border-black h-32 m-2 px-2 py-2" }
           %p.text-xl.font-bold
-            = link_to category.name, note_category_path(category), class: "text-white no-underline"
-            (#{category.notes.size})
+            = link_to note_category_path(category), class: "text-white no-underline" do
+              = "#{category.name} (#{category.notes.size})"

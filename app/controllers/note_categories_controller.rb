@@ -2,7 +2,8 @@ class NoteCategoriesController < ApplicationController
 
   def show
     note_category = NoteCategory.find(params[:id])
-    render 'show', locals: { category: note_category }
+    notes = note_category.notes
+    render 'show', locals: { category: note_category, notes: notes }
   end
 
   def new
